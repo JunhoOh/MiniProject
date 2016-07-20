@@ -1,0 +1,13 @@
+/db.properties
+/mapper_localMgr.xml
+/mapper_login.xml
+/mapper_manager.xml
+/mapper_memberJoin.xml
+/myBatisConfig.xml
+/sinbun_kanri.txt
+/src/
+/struts.xml
+/struts_localmgr.xml
+/struts_login.xml
+/struts_manager.xml
+/struts_member.xml

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.multipart.parser" value="jakarta" />
+	<constant name="struts.multipart.saveDir" value="/upload/temp" />
+	<constant name="struts.multipart.maxSize" value="16777215" />
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	
+	<package name="default" extends="json-default">
+	
+		<!-- login Interceptor -->
+		<interceptors>
+			<interceptor name="loginInterceptor" class="src.common.LoginInterceptor"/>
+			<interceptor-stack name="loginStack">
+				<interceptor-ref name="defaultStack"/>
+				<interceptor-ref name="loginInterceptor"/>
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 디폴트 액션 정의 -->
+		<default-action-ref name="main"/>
+		
+		<global-results>
+			<result name="login" type="redirect">/main.action</result>
+		</global-results>
+		<action name="main">
+			<result>/MokUP.jsp</result>
+		</action>
+		
+		<action name="logout" class="src.localmgr.LocalMgrAction" method="logout">
+			<result type="redirect">/main.action</result>
+		</action>
+	</package>
+	
+	<include file="struts_login.xml"/>
+	<include file="struts_manager.xml"/>
+	<include file="struts_localmgr.xml"/>
+	<include file="struts_member.xml"/>
+	
+</struts>

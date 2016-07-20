@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="login">
+<!-- ID検索 -->
+<select id="getUser" resultType="src.bean.LoginBean">
+		SELECT user_id FROM Login_TBL WHERE
+		USER_ID = #{USER_ID}
+	</select>
+<!-- PWDの検索 -->
+	<select id="getPwd" resultType="src.bean.LoginBean">
+		SELECT USER_PS, USER_STATUS FROM Login_TBL WHERE
+		USER_PS = #{USER_PS} AND USER_ID = #{USER_ID}
+	</select>
+	
+	<select parameterType="java.util.Map" id="searchId" resultType="Integer"> 
+		select count(*) from login_tbl where user_id = #{USER_ID} 
+	</select>
+
+	<update parameterType="java.util.Map" id="modifyPwd">
+ 		update login_tbl set user_ps = #{USER_PS} where user_id = #{USER_ID}
+ 	</update>	
+</mapper>

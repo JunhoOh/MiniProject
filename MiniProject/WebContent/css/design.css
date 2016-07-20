@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+
+
+	#search_text{
+		padding-right:10px;
+		width:100%px;
+	}
+	#search_option{
+		width:160px;
+	}
+
+	#logout_btn{
+
+		margin-top:15px;
+		margin-left:475px;
+	}
+	#logout_btn1{
+		margin-left:345px;
+	}
+	#firstlocal_btn{
+		margin-top:15px;	
+	}
+	#secondlocal_btn {
+		margin-top:15px;	
+		margin-left:350px;
+	}
+	
+	.button_kensaku,
+	.button-taikai,
+	.button-secondary {
+		color: white;
+		border-radius: 4px;	
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	}
+	.button-secondary {
+		background: rgb(66, 184, 221); /* this is a light blue */
+	}
+	.button-taikai {
+		background: rgb(223, 117, 20); /* this is an orange */
+	}
+	.button_kensaku {
+		background: #96ceb4;
+	}
+	.td_padding {
+		padding-top: 10px;
+		padding-bottom:10px;
+	}
+	.box{
+		margin:auto;
+	    padding : 30px;
+	}
+	
+	.textbox{
+		height : 30pt;
+		width : 100%;
+	}
+	td{
+		padding : 10px;
+	}
+	
+
